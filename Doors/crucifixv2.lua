@@ -4,8 +4,6 @@ local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 local CF = CFrame.new
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
 local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
-local crucifix = game.Workspace.Tools.Objects.Crucfix
-game.Crucifix.Parent = game.Players.LocalPlayer.BackPack
     game.StarterGui:SetCore("SendNotification", {
         Title = "Crucifix",
         Text = "Crucifix script by Kyxles/lucid, Credits to Vynixius!"
