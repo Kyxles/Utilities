@@ -9,7 +9,7 @@ local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
         Text = "Crucifix script by Kyxles/lucid, Credits to Vynixius!"
     })
 -- Create your tool here
-local exampleTool = LoadCustomInstance("rbxassetid://11452075531")
+local exampleTool = LoadCustomInstance("rbxassetid://11416603351")
 
 
 -- Create custom shop item
