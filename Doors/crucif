@@ -32,11 +32,7 @@ shadow.Unequipped:Connect(function()
         LeftArm.LeftShoulder.C1 = LeftC1
 end)
 local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
-local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
 local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-local CF = CFrame.new
-local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
-local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
 
 -- Create custom shop item
 CustomShop.CreateItem(exampleTool, {
