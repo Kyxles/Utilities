@@ -37,13 +37,6 @@ local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 local CF = CFrame.new
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
 local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Crucifix",
-        Text = "Crucifix script by Kyxles/lucid, Credits to Vynixius!"
-    })
--- Create your tool here
-local exampleTool = LoadCustomInstance("rbxassetid://11416603351")
-
 
 -- Create custom shop item
 CustomShop.CreateItem(exampleTool, {
