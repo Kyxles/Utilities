@@ -21,7 +21,7 @@ local ExtraTab = Window:CreateTab("Extra", 9954301632)
 local CrucifixButton = ItemsTab:CreateButton({
 	Name = "Give Crucifix",
 	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Kyxles/Utilities/main/Doors/crucif'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Johnny39871/assets/main/crucifixo'))()
 	end,
 })
 SpawnTab:CreateLabel("Regular DOORS Entities")
@@ -133,6 +133,15 @@ local HaltButton = SpawnTab:CreateButton({
 	Callback = function()
 		require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)])
 	end,
+})
+local SeekButton = SpawnTab:CreateButton({
+	Name = "Spawn Seek",
+	Callback = function()
+local EntitySpawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/dreadmania/Scripts/main/EntitySpawner.lua"))()
+local Configuration = {}
+
+EntitySpawner:Spawn("Seek", unpack(Configuration))
+	end
 })
 local GlitchButton = SpawnTab:CreateButton({
 	Name = "Spawn Glitch",
@@ -594,6 +603,17 @@ local AttackButton = OtherTab:CreateButton({
 			firesignal(game.ReplicatedStorage.Bricks.ClutchHeartbeat.OnClientEvent)
 	end
 	end
+})
+
+local DuplicateButton = OtherTab:CreateButton({
+	Name = "Duplicate Figure",
+	Callback = function()
+local door = "50"
+local Figure = game:GetService("Workspace").CurrentRooms[door].FigureSetup.FigureRagdoll:Clone()
+Figure.Parent = game:GetService("Workspace").CurrentRooms[door].FigureSetup
+Figure.Position = Vector3.new(game:GetService("Workspace").CurrentRooms[door].FigureSetup.FigureRagdoll);
+--Duplicate the figure 
+end
 })
 local MinigameButton = OtherTab:CreateButton({
 	Name = "Heart Minigame",
@@ -1344,12 +1364,3 @@ Creator.runEntity(entity)
 	end,
 })
 CustomTab:CreateLabel("Credits to 11Depraved_Smiley11 (Glieek)#0360 for Enraged Terror")
-
-
-CustomTab:CreateButton({
-	Name = "Button Example",
-	Callback = function()
-		-- The function that takes place when the button is pressed
-	end,
-})
-CustomTab:CreateLabel("Label Example")
