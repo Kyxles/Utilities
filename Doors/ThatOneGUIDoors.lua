@@ -4,7 +4,7 @@ local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Ga
 local Window = Rayfield:CreateWindow({
 	Name = "Real_Kyxles's DOORS Gui",
 	LoadingTitle = "Loading Rayfield Interface Suite",
-	LoadingSubtitle = "can i sniff your balls rq",
+	LoadingSubtitle = "bonk gui version v1.2, by Kyxles#1337",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = "Rayfield Interface Suite",
@@ -822,6 +822,10 @@ end
 })
 CustomTab:CreateLabel("Credits to ambush#8832 for G-95")
 
+CustomTab:CreateButton({
+	Name = "Spawn Trollface (KILLABLE)",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyxles/Utilities/main/Doors/trollface.txt"))()		
 CustomTab:CreateButton({
 	Name = "Spawn A-60 (KILLABLE)",
 	Callback = function()
