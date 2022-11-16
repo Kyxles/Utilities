@@ -1367,4 +1367,6 @@ Creator.runEntity(entity)
 
 	end,
 })
+end
+})
 CustomTab:CreateLabel("Credits to 11Depraved_Smiley11 (Glieek)#0360 for Enraged Terror")
