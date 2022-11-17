@@ -42,6 +42,7 @@ OtherTab:CreateLabel("Some Stuff")
 ExtraTab:CreateLabel("Misc Stuff")
 CreditsTab:CreateLabel("Kyxles#1337 - Owner, Developer")
 CreditsTab:CreateLabel("Zepsyy#0001 - Some awesome scripts")
+CreditsTab:CreateLabel("Kardin Hong - The Legend")
 CreditsTab:CreateLabel("discord.gg/pgYp5W6bH6 - The Gang")
 local ScreechButton = SpawnTab:CreateButton({
 	Name = "Spawn Screech",
