@@ -1,10 +1,13 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+local Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+
+Inviter.Join("https://discord.gg/pgYp5W6bH6")
 
 local Window = Rayfield:CreateWindow({
 	Name = "Real_Kyxles's DOORS Gui",
 	LoadingTitle = "Loading Rayfield Interface Suite",
-	LoadingSubtitle = "bonk gui version v1.2, by Kyxles#1337",
+	LoadingSubtitle = "bonk gui version v1.3, by Kyxles#1337",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = "Rayfield Interface Suite",
@@ -18,18 +21,28 @@ local EveryDoorTab = Window:CreateTab("Entities Every Door", 11278626246)
 local ItemsTab = Window:CreateTab("Items", 10962930858)
 local OtherTab = Window:CreateTab("Other", 8126977748)
 local ExtraTab = Window:CreateTab("Extra", 9954301632)
+local CreditsTab = Window:CreateTab("Credits", 450158255)
+ItemsTab:CreateLabel("Useful DOORS Items")
 local CrucifixButton = ItemsTab:CreateButton({
 	Name = "Give Crucifix",
 	Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Johnny39871/assets/main/crucifixo'))()
 	end,
 })
+local GunButton = ItemsTab:CreateButton({
+	Name = "Give Gun",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
+	end,
+})
 SpawnTab:CreateLabel("Regular DOORS Entities")
 CustomTab:CreateLabel("Custom DOORS Entities")
 EveryDoorTab:CreateLabel("DOORS Entities Every Door")
-ItemsTab:CreateLabel("Useful DOORS Items")
 OtherTab:CreateLabel("Some Stuff")
 ExtraTab:CreateLabel("Misc Stuff")
+CreditsTab:CreateLabel("Kyxles#1337 - Owner, Developer")
+CreditsTab:CreateLabel("Zepsyy#0001 - Some awesome scripts")
+CreditsTab:CreateLabel("discord.gg/pgYp5W6bH6 - The Gang")
 local ScreechButton = SpawnTab:CreateButton({
 	Name = "Spawn Screech",
 	Callback = function()
