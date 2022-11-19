@@ -4,7 +4,7 @@ local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Ga
 local Window = Rayfield:CreateWindow({
 	Name = "Real_Kyxles's DOORS Gui",
 	LoadingTitle = "Loading Rayfield Interface Suite",
-	LoadingSubtitle = "bonk gui version v1.3, by Kyxles#1337",
+	LoadingSubtitle = "bonk gui version v1.4, by Kyxles#1337",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = "Rayfield Interface Suite",
@@ -161,7 +161,6 @@ local GlitchButton = SpawnTab:CreateButton({
 		require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)])
 	end,
 })
-
 local RoomActionsDropdown = SpawnTab:CreateDropdown({
 	Name = "Next Room Actions",
 	Options = {"Hallway Jack","Shadow", "Eyes"},
@@ -536,7 +535,20 @@ end
 end)
 	end,
 })
-
+local SeekEyesButton = RoomTab:CreateButton({
+	Name = "Spawn Seek Eyes",
+	Callback = function()
+   require(game.ReplicatedStorage.ClientModules.EntityModules.Seek).tease(nil, workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")], 100)
+	end,
+})
+local TimothyButton = SpawnTab:CreateButton({
+	Name = "Spawn Timothy",
+	Callback = function()
+	local a = game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game
+    require(a.RemoteListener.Modules.SpiderJumpscare)(require(a), workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)].Assets.Table.DrawerContainer, 0.2)
+	end,
+})
+local Paragraph = SpawnTab:CreateParagraph({Title = "WARNING", Content = "Timothy will not appear in rooms without drawers. my balls go fling"})
 SpawnTab:CreateLabel("JOIN OUR SERVER!! .gg/pgYp5W6bH6")
 local BreakLightButton = OtherTab:CreateButton({
 	Name = "Break Lights",
