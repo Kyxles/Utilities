@@ -1,8 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
-local Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
-
-Inviter.Join("https://discord.gg/pgYp5W6bH6")
 
 local Window = Rayfield:CreateWindow({
 	Name = "Real_Kyxles's DOORS Gui",
@@ -1384,3 +1381,6 @@ Creator.runEntity(entity)
 end
 })
 CustomTab:CreateLabel("Credits to 11Depraved_Smiley11 (Glieek)#0360 for Enraged Terror")
+local Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+
+Inviter.Join("https://discord.gg/pgYp5W6bH6")
