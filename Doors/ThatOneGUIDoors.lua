@@ -533,9 +533,9 @@ camShake:ShakeOnce(5,50,0.7,0.2)
 end
 
 end)
-	end,
+	end
 })
-local SeekEyesButton = RoomTab:CreateButton({
+local SeekEyesButton = SpawnTab:CreateButton({
 	Name = "Spawn Seek Eyes",
 	Callback = function()
    require(game.ReplicatedStorage.ClientModules.EntityModules.Seek).tease(nil, workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")], 100)
