@@ -4,12 +4,17 @@ local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Ga
 local Window = Rayfield:CreateWindow({
 	Name = "Real_Kyxles's DOORS Gui",
 	LoadingTitle = "Loading Rayfield Interface Suite",
-	LoadingSubtitle = "bonk gui version v1.7, by Kyxles#1337",
+	LoadingSubtitle = "real_kyxles's gui version v1.8, by Kyxles#0001",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = "Rayfield Interface Suite",
 		FileName = "Big Hub"
 	},
+	Discord = {
+        	Enabled = false,
+        	Invite = "Yjre5uDxxC", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
 	KeySystem = false, -- Set this to true to use our key system
 })
 local SpawnTab = Window:CreateTab("Entities", 10722835155)
@@ -33,10 +38,31 @@ local ShopUpdatedCrucifixButton = ItemsTab:CreateButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/Crucifix"))()
 	end,
 })
+local ChristmasCrucifixButton = ItemsTab:CreateButton({
+	Name = "Give Chirstmas Crucifix",
+	Callback = function()
+local Item = game:GetObjects("rbxassetid://11583101826")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+	end,
+})
 local GunButton = ItemsTab:CreateButton({
 	Name = "Give Gun",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
+	end,
+})
+local KeyButton = ItemsTab:CreateButton({
+	Name = "Give Key",
+	Callback = function()
+local Item = game:GetObjects("rbxassetid://11471202845")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+	end,
+})
+local FlashlightButton = ItemsTab:CreateButton({
+	Name = "Give Flashlight",
+	Callback = function()
+local Item = game:GetObjects("rbxassetid://11475274528")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
 	end,
 })
 SpawnTab:CreateLabel("Regular DOORS Entities")
@@ -47,8 +73,9 @@ ExtraTab:CreateLabel("Misc Stuff")
 KeybindsTab:CreateLabel("Keybinds")
 CreditsTab:CreateLabel("Kyxles#0001 - Owner, Developer")
 CreditsTab:CreateLabel("imsuspicious100304045#8018 - Base Of The Script (VERY HIGH credits)")
-CreditsTab:CreateLabel("Zepsyy#0001 - Epic gun script and stuff")
-CreditsTab:CreateLabel("MidnightCyborg#0001 - Some very very cool scripts")
+CreditsTab:CreateLabel("Zepsyy#0001 - Some very very cool scripts")
+CreditsTab:CreateLabel("MidnightCyborg#0001 - Some very very cool scripts x2")
+CreditsTab:CreateLabel("Demogorgon#6314 - Some very very cool scripts x3")
 CreditsTab:CreateLabel("Kardin Hong - The Legend")
 CreditsTab:CreateLabel("discord.gg/pgYp5W6bH6 - The Gang")
 local ScreechButton = SpawnTab:CreateButton({
@@ -640,6 +667,13 @@ Figure.Position = Vector3.new(game:GetService("Workspace").CurrentRooms[door].Fi
 --Duplicate the figure
 end
 })
+local OldSeekButton = OtherTab:CreateButton({
+	Name = "Old Seek",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/vPW0LWwU"))()
+	end,
+})
+local Paragraph = OtherTab:CreateParagraph({Title = "Important Note", Content = "Old Seek will only work when exeucted in seek hallway! Executing in other rooms will not work."})
 local MinigameButton = OtherTab:CreateButton({
 	Name = "Heart Minigame",
 	Callback = function()
@@ -1598,6 +1632,3 @@ Creator.runEntity(entity)
 end
 })
 CustomTab:CreateLabel("Credits to 11Depraved_Smiley11 (Glieek)#0360 for Enraged Terror")
-local Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
-
-Inviter.Join("https://discord.gg/pgYp5W6bH6")
