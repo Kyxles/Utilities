@@ -2,9 +2,9 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
 
 local Window = Rayfield:CreateWindow({
-	Name = "Real_Kyxles's DOORS Gui",
+	Name = "Real_Kyxles's DOORS Gui (XMAS Update)",
 	LoadingTitle = "Loading Rayfield Interface Suite",
-	LoadingSubtitle = "real_kyxles's gui version v1.8, by Kyxles#0001",
+	LoadingSubtitle = "real_kyxles's gui version v2.0 [XMAS UPDATE], by Kyxles#0001",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = "Rayfield Interface Suite",
@@ -673,17 +673,58 @@ local OldSeekButton = OtherTab:CreateButton({
 		loadstring(game:HttpGet("https://pastebin.com/raw/vPW0LWwU"))()
 	end,
 })
-local Paragraph = OtherTab:CreateParagraph({Title = "Important Note", Content = "Old Seek will only work when exeucted in seek hallway! Executing in other rooms will not work."})
+local Paragraph2 = OtherTab:CreateParagraph({Title = "Important Note", Content = "Old Seek will only work when exeucted in seek hallway! Executing in other rooms will not work."})
 local MinigameButton = OtherTab:CreateButton({
 	Name = "Heart Minigame",
 	Callback = function()
 		firesignal(game.ReplicatedStorage.Bricks.ClutchHeartbeat.OnClientEvent)
 	end,
 })
+local BeFigure50Button = OtherTab:CreateButton({
+	Name = "Become Figure at Door 50",
+	Callback = function()
+workspace.CurrentCamera:Destroy()
+task.wait(.1)
+workspace.CurrentCamera.CameraType = Enum.CameraType.Attach
+workspace.CurrentCamera.CameraSubject = workspace.CurrentRooms["50"].FigureSetup.FigureRagdoll.Head.FakeHead
+game.Players.LocalPlayer.PlayerGui.MainUI.Enabled = false
+	end,
+})
+local BeFigure100Button = OtherTab:CreateButton({
+Name = "Become Figure at Door 100",
+Callback = function()
+workspace.CurrentCamera:Destroy()
+task.wait(.1)
+workspace.CurrentCamera.CameraType = Enum.CameraType.Attach
+workspace.CurrentCamera.CameraSubject = workspace.CurrentRooms["100"].FigureSetup.FigureRagdoll.Head.FakeHead
+game.Players.LocalPlayer.PlayerGui.MainUI.Enabled = false
+
+	end,
+})
+local HardcoreButton = OtherTab:CreateButton({
+	Name = "Hardcore Mode",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/DoorsModes/HardMode(Multplayer%2CProtected).lua'))()
+	end,
+})
+
+local SkellyChestButton = OtherTab:CreateButton({
+	Name = "Skeleton Chest",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/CometRestoration/main/Skeletonkey.lua"))()
+	end,
+})	
+local Paragraph = OtherTab:CreateParagraph({Title = "Important Note 2", Content = "Execute skeleton chest in shop, then you will see a door named E-001 open it."})	
 local ThanksgivingButton = OtherTab:CreateButton({
 	Name = "Thanksgiving Theme",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSthanksgiving"))()
+	end,
+})
+local MinecraftButton = OtherTab:CreateButton({
+Name = "Minecraft Room Mod",
+Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/y2WmccLk"))()
 	end,
 })
 local ChristmasButton = OtherTab:CreateButton({
@@ -692,6 +733,12 @@ local ChristmasButton = OtherTab:CreateButton({
 		loadstring(game:HttpGet("https://pastebin.com/raw/32wnGSEh"))()
 	end,
 })
+local RTXButton = OtherTab:CreateButton({
+	Name = "RTX",
+	Callback = function()
+		loadstring(game:HttpGet('https://pastebin.com/raw/HAuQ74SY'))()
+	end,
+})			
 local RushKeybind = KeybindsTab:CreateKeybind({
 	Name = "Rush",
 	CurrentKeybind = "Q",
