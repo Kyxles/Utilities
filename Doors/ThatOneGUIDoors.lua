@@ -18,6 +18,7 @@ local Window = Rayfield:CreateWindow({
 	KeySystem = false, -- Set this to true to use our key system
 })
 local SpawnTab = Window:CreateTab("Entities", 10722835155)
+local EntitiesSecsTab = Window:CreateTab("Entities Every 15 Seconds", 10826375568)
 local CustomTab = Window:CreateTab("Custom Entities", 11278229112)
 local EveryDoorTab = Window:CreateTab("Entities Every Door", 11278626246)
 local ItemsTab = Window:CreateTab("Items", 10962930858)
@@ -35,13 +36,52 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Johnny39871/assets/ma
 local ShopUpdatedCrucifixButton = ItemsTab:CreateButton({
 	Name = "Give Updated Crucifix",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/Crucifix"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/Doors/Crucifix.lua"))()
 	end,
 })
 local ChristmasCrucifixButton = ItemsTab:CreateButton({
-	Name = "Give Chirstmas Crucifix",
+	Name = "Give Christmas Crucifix",
 	Callback = function()
 local Item = game:GetObjects("rbxassetid://11583101826")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+	end,
+})
+local HalloweenCrucifixButton = ItemsTab:CreateButton({
+	Name = "Give Halloween Crucifix",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mye123/MyeWareHub/main/Halloween%20Crucifix"))()
+	end,
+})
+local DevilCrucifixButton = ItemsTab:CreateButton({
+	Name = "Give Devil Crucifix",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/sa/main/dasda%20sd%3Bl%2Cknasbnd%2Caj%20ms"))()
+	end,
+})
+local FigureCrucifixButton = ItemsTab:CreateButton({
+	Name = "Give Figure Crucifix",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/ET7pUnLi"))()
+	end,
+})
+local SeekCrucifixButton = ItemsTab:CreateButton({
+	Name = "Give Seek Crucifix",
+	Callback = function()
+local Item = game:GetObjects("rbxassetid://11814491940")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+	end,
+})
+local GuildingCandleButton = ItemsTab:CreateButton({
+	Name = "Give Guiding Candle",
+	Callback = function()
+local Item = game:GetObjects("rbxassetid://11813933914")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+	end,
+})
+local FakeVitaminsButton = ItemsTab:CreateButton({
+	Name = "Give Fake Vitamins",
+	Callback = function()
+local Item = game:GetObjects("rbxassetid://11673189752")[1]
 Item.Parent = game.Players.LocalPlayer.Backpack
 	end,
 })
@@ -66,6 +106,7 @@ Item.Parent = game.Players.LocalPlayer.Backpack
 	end,
 })
 SpawnTab:CreateLabel("Regular DOORS Entities")
+EntitiesSecsTab:CreateLabel("Regular DOORS Entities Every 15 Seconds")
 CustomTab:CreateLabel("Custom DOORS Entities")
 EveryDoorTab:CreateLabel("DOORS Entities Every Door")
 OtherTab:CreateLabel("Some Stuff")
@@ -578,6 +619,146 @@ local ShadowButton = EveryDoorTab:CreateButton({
 	end,
 })
 SpawnTab:CreateLabel("JOIN OUR SERVER!! .gg/pgYp5W6bH6")
+local RushSecsButton = EntitesSecsTab:CreateButton({
+	Name = "Spawn Rush Every 15 Seconds",
+	Callback = function()
+		      local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+        
+        while true do
+            coroutine.wrap(function() local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+        
+        local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+        -- Create entity
+        local entity = Creator.createEntity({
+            CustomName = "Rush", -- Custom name of your entity
+            Model = "https://github.com/Johnny39871/assets/blob/main/Rush.rbxm?raw=true", -- Can be GitHub file or rbxassetid
+            Speed = 100, -- Percentage, 100 = default Rush speed
+            DelayTime = 2, -- Time before starting cycles (seconds)
+            HeightOffset = 0,
+            CanKill = false,
+            KillRange = 25,
+            BreakLights = true,
+            BackwardsMovement = false,
+            FlickerLights = {
+                true, -- Enabled/Disabled
+                1, -- Time (seconds)
+            },
+            Cycles = {
+                Min = 1,
+                Max = 1,
+                WaitTime = 2,
+            },
+            CamShake = {
+                true, -- Enabled/Disabled
+                {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+                100, -- Shake start distance (from Entity to you)
+            },
+            Jumpscare = {
+                true, -- Enabled/Disabled
+                {
+                    Image1 = "rbxassetid://10483855823", -- Image1 url
+                    Image2 = "rbxassetid://10483999903", -- Image2 url
+                    Shake = true,
+                    Sound1 = {
+                        10483790459, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Sound2 = {
+                        10483837590, -- SoundId
+                        { Volume = 0.5 }, -- Sound properties
+                    },
+                    Flashing = {
+                        true, -- Enabled/Disabled
+                        Color3.fromRGB(0, 0, 255), -- Color
+                    },
+                    Tease = {
+                        true, -- Enabled/Disabled
+                        Min = 4,
+                        Max = 4,
+                    },
+                },
+            },
+            CustomDialog = {"You died to Rush...", "your balls look dry", "Can I put some lotion on them?"}, -- Custom death message
+        })
+        
+        -----[[ Advanced ]]-----
+        entity.Debug.OnEntitySpawned = function(entityTable)
+            print("Entity has spawned:", entityTable.Model)
+        end
+        
+        entity.Debug.OnEntityDespawned = function(entityTable)
+            print("Entity has despawned:", entityTable.Model)
+        end
+        
+        entity.Debug.OnEntityStartMoving = function(entityTable)
+            print("Entity has started moving:", entityTable.Model)
+        end
+        
+        entity.Debug.OnEntityFinishedRebound = function(entityTable)
+            print("Entity has finished rebound:", entityTable.Model)
+        end
+        
+        entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+            print("Entity:", entityTable.Model, "has entered room:", room)
+        end
+        
+        entity.Debug.OnLookAtEntity = function(entityTable)
+            print("Player has looked at entity:", entityTable.Model)
+        end
+        
+        entity.Debug.OnDeath = function(entityTable)
+            warn("Player has died.")
+        end
+        ------------------------
+        
+        -- Run the created entity
+        Creator.runEntity(entity)
+	end,
+})
+						
+local ScreechSecsButton = EntitiesSecsTab:CreateButton({
+	Name = "Spawn Screech Every 15 Seconds",
+	Callback = function()
+		     local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+
+        while true do -- Will run the script forever
+          coroutine.wrap(function() require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(Data) end)() -- Coroutines prevent the script from yielding.
+        task.wait(15) -- Waits somewhere around a millisecond before executing again. This is necessary so that the script won't crash your game. You can also add a time as such: task.wait(1) or task.wait(0.5)
+	end,
+})
+local HaltSecsButton = EntitiesSecsTab:CreateButton({
+Name = "Spawn Halt Every 15 Seconds",
+Callback = function()
+	      local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+
+        while true do -- Will run the script forever
+          coroutine.wrap(function() require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)])          end)() -- Coroutines prevent the script from yielding.
+        task.wait(15) -- Waits somewhere around a millisecond before executing again. This is necessary so that the script won't crash your game. You can also add a time as such: task.wait(1) or task.wait(0.5)
+	end,
+})
+local GlitchSecsButton = EntitiesSecsTab:CreateButton({
+Name = "Spawn Glitch Every 15 Seconds",
+Callback = function()
+    local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+
+        while true do -- Will run the script forever
+          coroutine.wrap(function() require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(Data, workspace.CurrentRooms[tostring(game.ReplicatedStorage.GameData.LatestRoom.Value)]) end)() -- Coroutines prevent the script from yielding.
+        task.wait(15) -- Waits somewhere around a millisecond before executing again. This is necessary so that the script won't crash your game. You can also add a time as such: task.wait(1) or task.wait(0.5)
+	end,
+})		
+local TimothySecsButton = EntitiesSecsTab:CreateButton({
+Name = "Spawn Timothy Every 15 Seconds",
+Callback = function()
+      local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+
+        while true do -- Will run the script forever
+          coroutine.wrap(function() local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+
+            require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.SpiderJumpscare)(Data.workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:WaitForChild("Dresser").DrawerContainer, 0.2)  end)() -- Coroutines prevent the script from yielding.
+        task.wait(15) -- Waits somewhere around a millisecond before executing again. This is necessary so that the script won't crash your game. You can also add a time as such: task.wait(1) or task.wait(0.5)
+	end,
+})	
 local BreakLightButton = OtherTab:CreateButton({
 	Name = "Break Lights",
 	Callback = function()
