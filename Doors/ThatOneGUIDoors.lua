@@ -4,7 +4,7 @@ local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Ga
 local Window = Rayfield:CreateWindow({
 	Name = "Real_Kyxles's DOORS Gui (XMAS Update)",
 	LoadingTitle = "Loading Rayfield Interface Suite",
-	LoadingSubtitle = "real_kyxles's gui version v2.0 [XMAS UPDATE], by Kyxles#0001",
+	LoadingSubtitle = "real_kyxles's gui version v2.1 [XMAS UPDATE], by Kyxles#8891",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = "Rayfield Interface Suite",
@@ -112,7 +112,7 @@ EveryDoorTab:CreateLabel("DOORS Entities Every Door")
 OtherTab:CreateLabel("Some Stuff")
 ExtraTab:CreateLabel("Misc Stuff")
 KeybindsTab:CreateLabel("Keybinds")
-CreditsTab:CreateLabel("Kyxles#0001 - Owner, Developer")
+CreditsTab:CreateLabel("Kyxles#8891 - Owner, Developer")
 CreditsTab:CreateLabel("imsuspicious100304045#8018 - Base Of The Script (VERY HIGH credits)")
 CreditsTab:CreateLabel("Zepsyy#0001 - Some very very cool scripts")
 CreditsTab:CreateLabel("MidnightCyborg#0001 - Some very very cool scripts x2")
